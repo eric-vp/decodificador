@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.containers {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: #F3F5FC;
+    padding: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.left {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left svg {
+    width: 120px;
+}
+
+.left textarea, .left div {
+    margin-left: 10rem;
+}
+
+.right {
+    justify-content: space-between;
+    gap: 2rem;
+
+    font-size: 1.5rem;
+
+    color: #495057;
+    background-color: white;
+    border-radius: 32px;
+    width: 400px;
+
+    padding: 1.25rem;
+
+    box-shadow: 0 10px 15px #D8DFE8;
+}
+
+#text {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+textarea {
+    flex-grow: 2;
+
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    /* padding: 1rem; */
+    font-size: 2rem;
+    color: #0A3871;
+
+    background-color: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+textarea::placeholder {
+    opacity: 1;
+}
+
+.alert {
+    color: #495057;
+    font-size: .75rem;
+}
+
+.buttons {
+    display: flex;
+    padding: 1rem 0;
+    gap: 1.5rem;
+}
+
+.btn {
+    background-color: #0A3871;
+    color: white;
+
+    text-align: center;
+    padding: 1.5rem;
+
+    width: 328px;
+    border: none;
+    border-radius: 24px;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.btn:hover {
+    background-color: #356EA9;
+}
+
+.secondary {
+    /* background-color: #D8DFE8; */
+    background-color: transparent;
+    color: #0A3871;
+    border: 1px solid #0A3871;;
+}
+
+.secondary:hover {
+    /* background-color: #ADB5BD; */
+    background-color: #D8DFE8;
+}
+
+.btn-hidden {
+    display: none;
+}
+
+span{
+    text-align: center;
+    font-size: 1rem;
+}
+
+.text-bold {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #343A40;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .containers {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .left {
+        flex-grow: 2;
+    }
+    .left svg {
+        width: 32px;
+    }
+
+    .left textarea,
+    .left div {
+        margin-left: 0;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    .right img {
+        display: none;
+    }
+
+    .buttons {
+        padding-bottom: 0;
+    }
+
+    #copy {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .containers {
+        padding: 1rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: auto;
+    }
+}
